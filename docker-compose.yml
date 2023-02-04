@@ -1,0 +1,19 @@
+version: "3"
+services:
+  fallen-radio:
+    mem_limit: 60m
+    mem_reservation: 30m
+    cpus: 0.15
+    build:
+      .
+    environment:
+      - USERNAME=${USERNAME}
+      - TOKEN=${TOKEN}
+      - CHANNELS=${CHANNELS}
+    container_name: fallen-radio
+    networks:
+      - fallen-radio-network
+
+networks:
+  fallen-radio-network:
+    driver: bridge
