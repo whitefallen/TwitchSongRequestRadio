@@ -1,4 +1,52 @@
-[
-  "",
-  ""
-]
+{
+  "covers": [
+    "",
+    ""
+  ],
+  "seashanty" : [
+    "https://www.youtube.com/watch?v=JRWw6jpKquo",
+    "https://www.youtube.com/watch?v=1IyU3VXDAIk",
+    "https://www.youtube.com/watch?v=nw0i4BSicsU",
+    "https://www.youtube.com/watch?v=r5L7bLUqGJM",
+    "https://www.youtube.com/watch?v=oEpAMm0-kVg",
+    "https://www.youtube.com/watch?v=4dIiN57DQOI",
+    "https://www.youtube.com/watch?v=8j616idQwcE",
+    "https://www.youtube.com/watch?v=mZCmLU0vRiA",
+    "https://www.youtube.com/watch?v=38zuyOfL0hI",
+    "https://www.youtube.com/watch?v=HGdUm5bpwPY"
+  ],
+  "unholy": [
+    "https://www.youtube.com/watch?v=7QXDnWRy6MI",
+    "https://www.youtube.com/watch?v=1RwUzrvytag",
+    "https://www.youtube.com/watch?v=wXUUwJndpzY",
+    "https://www.youtube.com/watch?v=xyiZWdAPNCk",
+    "https://www.youtube.com/watch?v=6QSoOHjE35U",
+    "https://www.youtube.com/watch?v=IJuszgv09ck",
+    "https://www.youtube.com/watch?v=N5-uHsXSLeQ",
+    "https://www.youtube.com/watch?v=oH6Qi4JMIyc",
+    "https://www.youtube.com/watch?v=ArlniBm6ciI",
+    "https://www.youtube.com/watch?v=hDzgQvjAkEU",
+    "https://www.youtube.com/watch?v=qFeL2n_nFc8",
+    "https://www.youtube.com/watch?v=L2ZlLP9iveE"
+  ],
+  "rock": [
+    "",
+    ""
+  ],
+  "metal" : [
+    "",
+    ""
+  ],
+  "anime": [
+    "",
+    ""
+  ],
+  "electro": [
+    "",
+    ""
+  ],
+  "epic": [
+    "",
+    ""
+  ]
+}
