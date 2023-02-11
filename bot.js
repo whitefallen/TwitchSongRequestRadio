@@ -1,59 +1,94 @@
 const tmi = require('tmi.js');
 const axios = require("axios").default;
-// Prepare Channels List
-const channels = process.env.CHANNELS.split(',');
+const _ = require('lodash');
 
-// Define configuration options
-const opts = {
-  identity: {
-    username: process.env.USERNAME,
-    password: process.env.TOKEN
-  },
-  channels: channels
-};
+class Bot {
+  constructor(opts, songListData) {
+    this.opts = opts;
+    this.songlistData = JSON.parse(JSON.stringify(songListData));
+    this.client = this.createClient();
+    this.channel = opts.channels;
+  }
+  createClient = () => {
+    const botClient = new tmi.client(this.opts);
+    botClient.on('message', this.onMessageHandler);
+    botClient.on('connected', this.onConnectedHandler);
+    botClient.on('disconnected', this.onDisconnectedHandler);
+    return botClient;
+  }
+  connectClientWithChat = () => {
+    this.client.connect();
+  }
 
+  onMessageHandler = (target, context, msg, self) => {
+    if (self) { return; } // Ignore messages from the bot
 
-// Create a client with our options
-const client = new tmi.client(opts);
+    // Remove whitespace from chat message
+    const msgArr = msg.split(' ');
+    // Command name [!white-radio] args
+    const commandName = msgArr[0];
+    // Command name !white-radio [args]
+    const commandValue = msgArr[1];
+    // Get username
+    const sender = context.username;
+    // Get Channel the command was issued
+    const channel = target.substring(1, target.length);
 
-// Register our event handlers (defined below)
-client.on('message', onMessageHandler);
-client.on('connected', onConnectedHandler);
+    const allGenresAvailable = Object.keys(this.songlistData).filter(key => this.songlistData[key].length)
+    // If the command is known, let's execute it
+    if (commandName.startsWith("!") && commandName === '!white-radio') {
+      // save SongRequest
+      if(commandValue) {
+        if(allGenresAvailable.includes(commandValue)) {
+          this.sendRandomSongFromGenre(channel, commandValue);
+        } else {
+          this.client.say(channel, `I dont have music for that genre, sorry :(`);
+        }
+      } else {
+        this.sendRandomSong(channel);
+      }
 
-// Connect to Twitch:
-client.connect();
+      console.log(`* Executed ${commandName} command`);
+    }
+  }
+  sendRandomSong = (channel) => {
+    let song = this.pickRandomAcrossGenres();
+    this.removePickedSong(song);
+    this.client.say(channel, `!sr ${song}`);
+  }
+  sendRandomSongFromGenre = (channel, genre) => {
+    let song = this.pickRandomGenres(genre);
+    this.removePickedSong(song);
+    this.client.say(channel, `!sr ${song}`);
+  }
+  pickRandomAcrossGenres = () => {
+    let songlist = [];
+    for(let genre in this.songlistData) {
+      songlist.push(this.songlistData[genre]);
+    }
+    console.log(songlist);
+    return _.sample(_.flattenDeep(songlist).filter((el) => el !== null));
+  }
 
-// Called every time a message comes in
-function onMessageHandler (target, context, msg, self) {
-  if (self) { return; } // Ignore messages from the bot
+  removePickedSong = (song) => {
+    for(let genre in this.songlistData) {
+      _.remove(this.songlistData[genre], (songs) => { return songs === song})
+    }
+  }
 
-  // Remove whitespace from chat message
-  const msgArr = msg.split(' ');
-  // Command name [!bsr] args
-  const commandName = msgArr[0];
-  // Command Args !bsr [args]
-  const commandArgs = msgArr[1];
-  // Get username
-  const sender = context.username;
-  // Get Channel the command was issued
-  const channel = target.substring(1, target.length);
+  pickRandomGenres = (genre) => {
+    let songlist = [];
+    songlist.push(this.songlistData[genre]);
+    return _.sample(_.flattenDeep(songlist).filter((el) => el !== null));
+  }
+  onConnectedHandler = (addr, port) => {
+    console.log(`* Connected to ${addr}:${port}`);
+  }
 
-  // If the command is known, let's execute it
-  if (commandName === '!white-radio') {
-    // save SongRequest
-    sendRandomSong(sender, channel);
+  onDisconnectedHandler = () => {
 
-    console.log(`* Executed ${commandName} command`);
-  } else {
-    console.log(`* Unknown command ${commandName}`);
   }
 }
 
-async function sendRandomSong(username, channel) {
-  client.say(channel, `!sr https://www.youtube.com/watch?v=WvmnqWBczHo`);
-}
 
-// Called every time the bot connects to Twitch chat
-function onConnectedHandler (addr, port) {
-  console.log(`* Connected to ${addr}:${port}`);
-}
+module.exports = {Bot: Bot}
