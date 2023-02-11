@@ -1,7 +1,5 @@
 {
   "covers": [
-    "",
-    ""
   ],
   "seashanty" : [
     "https://www.youtube.com/watch?v=JRWw6jpKquo",
@@ -26,27 +24,41 @@
     "https://www.youtube.com/watch?v=oH6Qi4JMIyc",
     "https://www.youtube.com/watch?v=ArlniBm6ciI",
     "https://www.youtube.com/watch?v=hDzgQvjAkEU",
-    "https://www.youtube.com/watch?v=qFeL2n_nFc8",
     "https://www.youtube.com/watch?v=L2ZlLP9iveE"
   ],
   "rock": [
-    "",
-    ""
+    "https://www.youtube.com/watch?v=wa6gzxdGACk",
+    "https://www.youtube.com/watch?v=Dd4ROWtJYSQ",
+    "https://www.youtube.com/watch?v=hcvnypM8ft4"
   ],
   "metal" : [
-    "",
-    ""
+    "https://www.youtube.com/watch?v=ekU1dQjMsOQ",
+    "https://www.youtube.com/watch?v=ZMAy5K8vEGc",
+    "https://www.youtube.com/watch?v=Aibxit_PpAg",
+    "https://www.youtube.com/watch?v=ouW_RCAI0sg",
+    "https://www.youtube.com/watch?v=HSpaZjR_ULE",
+    "https://www.youtube.com/watch?v=qHbjoN3hUmk",
+    "https://www.youtube.com/watch?v=8No28NDPEJc",
+    "https://www.youtube.com/watch?v=0MUeHF1SOm8",
+    "https://www.youtube.com/watch?v=lMjqGl3UDCk",
+    "https://www.youtube.com/watch?v=UkI4KejmSfY",
+    "https://www.youtube.com/watch?v=uVysW4TWXS0",
+    "https://www.youtube.com/watch?v=rbFaVDfkI00",
+    "https://www.youtube.com/watch?v=nYwA6phqNEA",
+    "https://www.youtube.com/watch?v=_SQJlNcNvOM",
+    "https://www.youtube.com/watch?v=L8NznCl8XpM",
+    "https://www.youtube.com/watch?v=POTqjUddrhk",
+    "https://www.youtube.com/watch?v=Q0wbyQRRQJA",
+    "https://www.youtube.com/watch?v=CHXmHssCHY8",
+    "https://www.youtube.com/watch?v=fpUpVznI4Yc",
+    "https://www.youtube.com/watch?v=XiXb-6j4R98",
+    "https://www.youtube.com/watch?v=ocpDEOXABWg",
+    "https://www.youtube.com/watch?v=Auuqlcom6tM"
   ],
   "anime": [
-    "",
-    ""
   ],
   "electro": [
-    "",
-    ""
   ],
   "epic": [
-    "",
-    ""
   ]
 }
