@@ -20,6 +20,10 @@ class Bot {
     this.client.connect();
   }
 
+  disconnectClientFromChat = () => {
+    this.client.disconnect();
+  }
+
   onMessageHandler = (target, context, msg, self) => {
     if (self) { return; } // Ignore messages from the bot
 
