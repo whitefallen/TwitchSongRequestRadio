@@ -3,8 +3,9 @@ const axios = require("axios").default;
 const _ = require('lodash');
 const Bot = require("./bot.js").Bot;
 const cron = require("node-cron");
-require('json5/lib/register')
-require('dotenv').config()
+require('json5/lib/register');
+require('dotenv').config();
+const JSON5 = require('json5');
 
 
 // Prepare Channels List
@@ -18,7 +19,7 @@ if(Array.isArray(channels)) {
   botChannels.push(channels)
 }
 
-const songlistDataInitial = require('./songlist.json5')
+const songlistDataInitial = require('./songlist.json5');
 const songListData = songlistDataInitial;
 
 botChannels.forEach((channel) => {
@@ -39,7 +40,7 @@ const updateSongList = async () => {
   return await axios("https://raw.githubusercontent.com/whitefallen/TwitchSongRequestRadio/songs/songlist.json5");
 }
 /** "0 6 * * *" **/
-cron.schedule('* * * * *', () => {
+cron.schedule('0 6 * * *', () => {
   let newSongs = updateSongList();
   newSongs.then((res) => {
     updateBotsSongList(res.data);
@@ -49,6 +50,6 @@ cron.schedule('* * * * *', () => {
 
 const updateBotsSongList = (newSongList) => {
   botInstances.forEach((instance) => {
-    instance.bot.updateSongList(newSongList);
+    instance.bot.updateSongList(JSON5.parse(newSongList));
   })
 }

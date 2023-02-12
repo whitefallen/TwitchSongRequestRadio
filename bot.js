@@ -25,7 +25,6 @@ class Bot {
   }
 
   updateSongList = (songs) => {
-    console.log(songs);
     console.log(`Updated ${this.channel}'s songlist`);
     this.songlistData = JSON.parse(JSON.stringify(songs));
   }
