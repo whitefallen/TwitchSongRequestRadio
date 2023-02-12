@@ -34,11 +34,19 @@ botChannels.forEach((channel) => {
 })
 
 const updateSongList = async () => {
-  let response = await axios("https://raw.githubusercontent.com/whitefallen/TwitchSongRequestRadio/master/songlist.json");
-  console.log(response);
-  return response;
+  return await axios("https://raw.githubusercontent.com/whitefallen/TwitchSongRequestRadio/master/songlist.json");
 }
-
+/** "0 6 * * *" **/
 cron.schedule('* * * * *', () => {
-  updateSongList();
+  let newSongs = updateSongList();
+  newSongs.then((res) => {
+    updateBotsSongList(res.data);
+  })
+
 });
+
+const updateBotsSongList = (newSongList) => {
+  botInstances.forEach((instance) => {
+    instance.bot.updateSongList(newSongList);
+  })
+}
