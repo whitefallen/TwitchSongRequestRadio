@@ -37,7 +37,7 @@ const updateSongList = async () => {
   return await axios("https://raw.githubusercontent.com/whitefallen/TwitchSongRequestRadio/master/songlist.json");
 }
 /** "0 6 * * *" **/
-cron.schedule('* * * * *', () => {
+cron.schedule('0 6 * * *', () => {
   let newSongs = updateSongList();
   newSongs.then((res) => {
     updateBotsSongList(res.data);

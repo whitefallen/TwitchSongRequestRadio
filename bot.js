@@ -64,23 +64,20 @@ class Bot {
   }
   sendRandomSongs = (channel, amount) => {
     let songs = this.pickRandomAcrossGenres(amount);
-    this.removePickedSong(songs);
-    songs.forEach((song,index) => {
-      setTimeout(() => {
-        this.sendingSong(channel, song)
-      }, 6000*index);
-    })
+    this.handlingSendingSong(channel, songs);
   }
   sendRandomSongsFromGenre = (channel, genre, amount) => {
     let songs = this.pickRandomGenres(genre, amount);
-    this.removePickedSong(songs);
+    this.handlingSendingSong(channel, songs);
+  }
+  handlingSendingSong = (channel, songs) => {
     songs.forEach((song, index) => {
+      this.removePickedSong(song);
       setTimeout(() => {
         this.sendingSong(channel, song)
       }, 6000*index);
     })
   }
-
   sendingSong = (channel, song) => {
     this.client.say(channel, `!sr ${song}`);
   }
