@@ -24,6 +24,11 @@ class Bot {
     this.client.disconnect();
   }
 
+  updateSongList = (songs) => {
+    console.log(`Updated ${this.channel}'s songlist`);
+    this.songlistData = JSON.parse(JSON.stringify(songs));
+  }
+
   onMessageHandler = (target, context, msg, self) => {
     if (self) { return; } // Ignore messages from the bot
 
@@ -33,6 +38,8 @@ class Bot {
     const commandName = msgArr[0];
     // Command name !white-radio [args]
     const commandValue = msgArr[1];
+    // Command name !white-radio args1 [args2]
+    const commandAmount = msgArr[2] || 1;
     // Get username
     const sender = context.username;
     // Get Channel the command was issued
@@ -44,34 +51,48 @@ class Bot {
       // save SongRequest
       if(commandValue) {
         if(allGenresAvailable.includes(commandValue)) {
-          this.sendRandomSongFromGenre(channel, commandValue);
+          this.sendRandomSongsFromGenre(channel, commandValue, commandAmount);
         } else {
           this.client.say(channel, `I dont have music for that genre, sorry :(`);
         }
       } else {
-        this.sendRandomSong(channel);
+        this.sendRandomSongs(channel, commandAmount);
       }
 
       console.log(`* Executed ${commandName} command`);
     }
   }
-  sendRandomSong = (channel) => {
-    let song = this.pickRandomAcrossGenres();
-    this.removePickedSong(song);
+  sendRandomSongs = (channel, amount) => {
+    let songs = this.pickRandomAcrossGenres(amount);
+    this.handlingSendingSong(channel, songs);
+  }
+  sendRandomSongsFromGenre = (channel, genre, amount) => {
+    let songs = this.pickRandomGenres(genre, amount);
+    this.handlingSendingSong(channel, songs);
+  }
+  handlingSendingSong = (channel, songs) => {
+    songs.forEach((song, index) => {
+      this.removePickedSong(song);
+      setTimeout(() => {
+        this.sendingSong(channel, song)
+      }, 6000*index);
+    })
+  }
+  sendingSong = (channel, song) => {
     this.client.say(channel, `!sr ${song}`);
   }
-  sendRandomSongFromGenre = (channel, genre) => {
-    let song = this.pickRandomGenres(genre);
-    this.removePickedSong(song);
-    this.client.say(channel, `!sr ${song}`);
-  }
-  pickRandomAcrossGenres = () => {
+  pickRandomAcrossGenres = (amount) => {
     let songlist = [];
     for(let genre in this.songlistData) {
       songlist.push(this.songlistData[genre]);
     }
-    console.log(songlist);
-    return _.sample(_.flattenDeep(songlist).filter((el) => el !== null));
+    return _.sampleSize(_.flattenDeep(songlist).filter((el) => el !== null), amount);
+  }
+
+  pickRandomGenres = (genre, amount) => {
+    let songlist = [];
+    songlist.push(this.songlistData[genre]);
+    return _.sampleSize(_.flattenDeep(songlist).filter((el) => el !== null), amount);
   }
 
   removePickedSong = (song) => {
@@ -80,11 +101,6 @@ class Bot {
     }
   }
 
-  pickRandomGenres = (genre) => {
-    let songlist = [];
-    songlist.push(this.songlistData[genre]);
-    return _.sample(_.flattenDeep(songlist).filter((el) => el !== null));
-  }
   onConnectedHandler = (addr, port) => {
     console.log(`* Connected to ${addr}:${port}`);
   }
