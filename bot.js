@@ -52,13 +52,14 @@ class Bot {
       if(commandValue) {
         if(allGenresAvailable.includes(commandValue)) {
           this.sendRandomSongsFromGenre(channel, commandValue, commandAmount);
+        } else if(commandValue === "list") {
+          this.client.say(channel, `Available categories are ${_.toString(allGenresAvailable)}`);
         } else {
           this.client.say(channel, `I dont have music for that genre, sorry :(`);
         }
       } else {
         this.sendRandomSongs(channel, commandAmount);
       }
-
       console.log(`* Executed ${commandName} command`);
     }
   }

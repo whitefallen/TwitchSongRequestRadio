@@ -26,8 +26,8 @@ botChannels.forEach((channel) => {
   let pseudoArray = [channel];
   const opts = {
     identity: {
-      username: process.env.USERNAME,
-      password: process.env.TOKEN
+      username: process.env.USERNAMEBOT,
+      password: process.env.TOKENBOT
     },
     channels: pseudoArray
   };
