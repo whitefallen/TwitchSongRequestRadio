@@ -7,8 +7,8 @@ services:
     build:
       .
     environment:
-      - USERNAME=${USERNAME}
-      - TOKEN=${TOKEN}
+      - USERNAMEBOT=${USERNAMEBOT}
+      - TOKENBOT=${TOKENBOT}
       - CHANNELS=${CHANNELS}
     container_name: fallen-radio
     networks:

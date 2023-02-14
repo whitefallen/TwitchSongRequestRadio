@@ -4,7 +4,6 @@ const _ = require('lodash');
 const Bot = require("./bot.js").Bot;
 const cron = require("node-cron");
 require('json5/lib/register');
-require('dotenv').config();
 const JSON5 = require('json5');
 
 
