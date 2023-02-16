@@ -6,6 +6,7 @@
     "https://www.youtube.com/watch?v=ZwthxLtzYsI", // Papa Roach x Jeris Johnson - Last Resort
     "https://www.youtube.com/watch?v=zmgHe1l_v6A", // Bring Me The Horizon x Jeris Johnson - Can You Feel My Heart
     "https://www.youtube.com/watch?v=IxcxyGDD38E", // Ed Sheeran - Bad Habits feat. Bring Me The Horizon
+    "https://www.youtube.com/watch?v=dcu1A_EL_hQ", // Dreamcatcher - Odd eye BardCore(own Genre?)
   ],
   "seashanty" : [
     "https://www.youtube.com/watch?v=JRWw6jpKquo", // WELLERMAN COLLAB
@@ -35,7 +36,7 @@
   "heavy" : [
     "https://www.youtube.com/watch?v=wa6gzxdGACk", // CANTERVICE - Blackout
     "https://www.youtube.com/watch?v=Dd4ROWtJYSQ", // CANTERVICE - Void
-    "https://www.youtube.com/watch?v=hcvnypM8ft4",  // Richy Nix - Without You
+    "https://www.youtube.com/watch?v=hcvnypM8ft4", // Richy Nix - Without You
     "https://www.youtube.com/watch?v=ekU1dQjMsOQ", // BAD OMENS - Just Pretend
     "https://www.youtube.com/watch?v=ZMAy5K8vEGc", // BAD OMENS - The Grey
     "https://www.youtube.com/watch?v=Aibxit_PpAg", // BAD OMENS - Like A Villain
@@ -54,18 +55,60 @@
     "https://www.youtube.com/watch?v=POTqjUddrhk", // Disciple - Game On
     "https://www.youtube.com/watch?v=Q0wbyQRRQJA", // AS I LAY DYING - My Own Grave
     "https://www.youtube.com/watch?v=CHXmHssCHY8", // As I Lay Dying - A Greater Foundation
+    "https://www.youtube.com/watch?v=9Cb872pCbMs", // A day to remembver - miracle
     "https://www.youtube.com/watch?v=fpUpVznI4Yc", // Disturbed - Bad Man
     "https://www.youtube.com/watch?v=XiXb-6j4R98", // Disturbed - Unstoppable
     "https://www.youtube.com/watch?v=ocpDEOXABWg", // Thousand Foot Krutch: Courtesy Call
     "https://www.youtube.com/watch?v=Auuqlcom6tM", // Disturbed - Immortalized
     "https://www.youtube.com/watch?v=_P3Q6VkNrwg", // The Plot In You - Left Behind
     "https://www.youtube.com/watch?v=4FsO17x6QGE", // The Plot In You - Enemy
+    "https://www.youtube.com/watch?v=1YPBNAP-3DY", // Memphis may fire - Left for dead
+    "https://www.youtube.com/watch?v=OCdQ4hRi69k", // Memphis may fire - Bleed me dry
+    "https://www.youtube.com/watch?v=6HzE3KgHzHU", // Memphis may fire - Somebody
+    "https://www.youtube.com/watch?v=wUfkqYWxLjk", // Memphis may fire - Heavy is the Weight
+    "https://www.youtube.com/watch?v=NXn-dI9fFko", // Wage war - Circle the Drain
+    "https://www.youtube.com/watch?v=t2d3EDNDCn8", // Wage war - Low
+    "https://www.youtube.com/watch?v=hqRFWCbQ9Lk", // Kamelot - Opus of the Night
+    "https://www.youtube.com/watch?v=jMN3VRbftmA", // We Came as Romans - Black Hole
+    "https://www.youtube.com/watch?v=d-ULISYZXhM", // Bury Tomorrow - Heretic
+    "https://www.youtube.com/watch?v=baQVB2W1KAQ", // Starset - Waiting on the sky to change
+    "https://www.youtube.com/watch?v=VzEYQLANWgo", // Daughty - Seperate Ways
+    "https://www.youtube.com/watch?v=00NEUSkpA-g", // The Raven Age - Parasite
+    "https://www.youtube.com/watch?v=TB504NZpQnY", // Caskets - By the Sound
+    "https://www.youtube.com/watch?v=5oYRvOHW2iw", // Coldrain - Coexist
+    "https://www.youtube.com/watch?v=Jmbc_lTljqI", // Set if off - Why Worry
+    "https://www.youtube.com/watch?v=VgluSNPFRLA", // Set if off - Midnight Thoughts
+    "https://www.youtube.com/watch?v=oniytGOUi3c", // Set if off - Killer in the Mirror
+    "https://www.youtube.com/watch?v=LRsm8JksmKM", // Set if off - Loney Dance
+    "https://www.youtube.com/watch?v=9GTTwVSr2sM", // Set if off - i'll sleep when i'm dead
+    "https://www.youtube.com/watch?v=oVP0sg-yvHI", // Citizen Soldier - Never Ending Nightmares
+    "https://www.youtube.com/watch?v=piKG6j4E65E", // Panic at the disco - Emperors new clothes
+    "https://www.youtube.com/watch?v=IPXIgEAGe4U", // Panic at the disco - High Hopes
+    "https://www.youtube.com/watch?v=vc6vs-l5dkc", // Panic at the disco - i write sins not tragedies
+    "https://www.youtube.com/watch?v=JjPIOuFtWAI", // 30 Seconds to Mars - The Kill
+    "https://www.youtube.com/watch?v=_ao2u7F_Qzg", // The Rasmus - In the Shadows
+    "https://www.youtube.com/watch?v=txBfhpm1jI0", // The Pretty Reckless - Make me wanna die
+    "https://www.youtube.com/watch?v=Aw4HXskdTtg", // In This Moment - The in-between
+    "https://www.youtube.com/watch?v=iWIADZKU9dw", // Flyleaf - I'm so sick
+    "https://www.youtube.com/watch?v=e_S9VvJM1PI", // Icon Fore Hire - Make a move
     "https://www.youtube.com/watch?v=uCXGfwqljeQ", // Citizen Soldier ft. Lø Spirit - Limit
   ],
   "anime": [
   ],
   "electro": [
   ],
+  "kpop" : [
+    "https://www.youtube.com/watch?v=BL-aIpCLWnU", // Aespa - Black Mamba
+    "https://www.youtube.com/watch?v=rrBO9fy6A3s", // Blackpink - How you like that
+    "https://www.youtube.com/watch?v=RWDj4_A1hyQ", // Everglow - Dun Dun
+    "https://www.youtube.com/watch?v=pwxRdbC3Jvw", // Dreamcather - Odd Eye
+  ],
   "epic": [
+  ],
+  "funny": [
+    "https://www.youtube.com/watch?v=--9kqhzQ-8Q", // Tom Cardy - Have you Checked you Butthole
+  ],
+  "mellow": [
+    "https://www.youtube.com/watch?v=0Qdm-sSysKI" // Set if off - Killer in the Mirror
   ]
 }
