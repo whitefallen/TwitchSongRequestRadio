@@ -89,8 +89,22 @@
     "https://www.youtube.com/watch?v=_ao2u7F_Qzg", // The Rasmus - In the Shadows
     "https://www.youtube.com/watch?v=txBfhpm1jI0", // The Pretty Reckless - Make me wanna die
     "https://www.youtube.com/watch?v=Aw4HXskdTtg", // In This Moment - The in-between
+    "https://www.youtube.com/watch?v=03X0B6u-AxM", // In This Moment - Sick like me
+    "https://www.youtube.com/watch?v=RZYzcPwQN-8", // In this Moment - As above so below
+    "https://www.youtube.com/watch?v=8fEoWA9Vz3A", // Andy Black - We Dont have to Dance
+    "https://www.youtube.com/watch?v=l8Bhlg16d8E", // Andy Black - Ribcage
     "https://www.youtube.com/watch?v=iWIADZKU9dw", // Flyleaf - I'm so sick
+    "https://www.youtube.com/watch?v=yE9l1dfQMj0", // Nothing More - I'll be Okay
+    "https://www.youtube.com/watch?v=Q6c8X_s1h9Y", // Nothing more - Go to War
+    "https://www.youtube.com/watch?v=SV6pvII1eFU", // Nothing more - Dont Stop
+    "https://www.youtube.com/watch?v=8BMXHQg9WqE", // I Prevail - Bad Things
+    "https://www.youtube.com/watch?v=6JbL81RsUFA", // Versus Me - Terrified
     "https://www.youtube.com/watch?v=e_S9VvJM1PI", // Icon Fore Hire - Make a move
+    "https://www.youtube.com/watch?v=V5OC2IZW3Pg", // Halestorm - I Miss the Misery
+    "https://www.youtube.com/watch?v=lL2ZwXj1tXM", // Three days grace - never too late
+    "https://www.youtube.com/watch?v=xqds0B_meys", // Three days grace - animal i have become
+    "https://www.youtube.com/watch?v=ph9KP2_lT5Q", // Three days grace - i hate everything about you
+    "https://www.youtube.com/watch?v=7ViIny2YZH0", // Three days grace - so called life
     "https://www.youtube.com/watch?v=uCXGfwqljeQ", // Citizen Soldier ft. Lø Spirit - Limit
   ],
   "anime": [
@@ -107,8 +121,14 @@
   ],
   "funny": [
     "https://www.youtube.com/watch?v=--9kqhzQ-8Q", // Tom Cardy - Have you Checked you Butthole
+    "https://www.youtube.com/watch?v=76kp0mqDtDo", // Jan Böhmermann - baby got laugengebäck
+    "https://www.youtube.com/watch?v=SLbfqAY30GM", // Alligatoah - Nebenjob
+    "https://www.youtube.com/watch?v=GJY4VLbyWuw", // Jan Böhmermann - Wir sind Versandsoldaten
   ],
   "mellow": [
     "https://www.youtube.com/watch?v=0Qdm-sSysKI" // Set if off - Killer in the Mirror
+  ],
+  "popish": [
+
   ]
 }
