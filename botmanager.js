@@ -1,4 +1,3 @@
-const tmi = require('tmi.js');
 const axios = require("axios").default;
 const _ = require('lodash');
 const Bot = require("./bot.js").Bot;
@@ -8,7 +7,7 @@ const JSON5 = require('json5');
 
 
 // Prepare Channels List
-let allChannels = process.env.CHANNELS;
+let allChannels = process.env.CHANNELS || "";
 let botChannels = [];
 let botInstances = [];
 let channels = allChannels.includes(',') ? allChannels.split(',') : allChannels;

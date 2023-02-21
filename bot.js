@@ -1,5 +1,4 @@
 const tmi = require('tmi.js');
-const axios = require("axios").default;
 const _ = require('lodash');
 
 class Bot {
@@ -8,6 +7,7 @@ class Bot {
     this.songlistData = JSON.parse(JSON.stringify(songListData));
     this.client = this.createClient();
     this.channel = opts.channels;
+    this.currentChannel = this.channel;
   }
   createClient = () => {
     const botClient = new tmi.client(this.opts);
@@ -41,65 +41,96 @@ class Bot {
     // Command name !white-radio args1 [args2]
     const commandAmount = msgArr[2] || 1;
     // Get username
-    const sender = context.username;
+    // const sender = context.username;
     // Get Channel the command was issued
-    const channel = target.substring(1, target.length);
+    this.currentChannel = target.substring(1, target.length);
 
-    const allGenresAvailable = Object.keys(this.songlistData).filter(key => this.songlistData[key].length)
-    // If the command is known, let's execute it
-    if (commandName.startsWith("!") && commandName === '!white-radio') {
-      // save SongRequest
-      if(commandValue) {
-        if(allGenresAvailable.includes(commandValue)) {
-          this.sendRandomSongsFromGenre(channel, commandValue, commandAmount);
-        } else if(commandValue === "list") {
-          this.client.say(channel, `Available categories are ${_.toString(allGenresAvailable)}`);
-        } else {
-          this.client.say(channel, `I dont have music for that genre, sorry :(`);
-        }
-      } else {
-        this.sendRandomSongs(channel, commandAmount);
-      }
-      console.log(`* Executed ${commandName} command`);
-    }
+    this.radioCommand(commandName, commandValue, commandAmount);
+    this.songsLeftInGenre();
+    console.log(`* Executed ${commandName} command`);
+
   }
-  sendRandomSongs = (channel, amount) => {
+  sendRandomSongs = (amount) => {
     let songs = this.pickRandomAcrossGenres(amount);
-    this.handlingSendingSong(channel, songs);
+    this.handlingSendingSong(songs);
   }
-  sendRandomSongsFromGenre = (channel, genre, amount) => {
+  sendRandomSongsFromGenre = (genre, amount) => {
     let songs = this.pickRandomGenres(genre, amount);
-    this.handlingSendingSong(channel, songs);
+    this.handlingSendingSong(songs);
   }
-  handlingSendingSong = (channel, songs) => {
+  handlingSendingSong = (songs) => {
     songs.forEach((song, index) => {
       this.removePickedSong(song);
       setTimeout(() => {
-        this.sendingSong(channel, song)
+        this.sendingSong(song)
       }, 6000*index);
     })
   }
-  sendingSong = (channel, song) => {
-    this.client.say(channel, `!sr ${song}`);
+  sendingSong = (song) => {
+    this.client.say(this.currentChannel, `!sr ${song}`);
   }
   pickRandomAcrossGenres = (amount) => {
     let songlist = [];
     for(let genre in this.songlistData) {
       songlist.push(this.songlistData[genre]);
     }
-    return _.sampleSize(_.flattenDeep(songlist).filter((el) => el !== null), amount);
+    return this.pickSong(songlist, amount);
   }
 
   pickRandomGenres = (genre, amount) => {
     let songlist = [];
     songlist.push(this.songlistData[genre]);
-    return _.sampleSize(_.flattenDeep(songlist).filter((el) => el !== null), amount);
+    return this.pickSong(songlist, amount);
+  }
+
+  pickSong = (songlist, amount) => {
+    return _.sampleSize(_.flattenDeep(songlist).filter((el) => el !== null), amount)
   }
 
   removePickedSong = (song) => {
     for(let genre in this.songlistData) {
       _.remove(this.songlistData[genre], (songs) => { return songs === song})
     }
+  }
+
+  radioCommand = (cName, cValue, cAmount) => {
+    let allGenresAvailable = this.genresInList();
+    if(cName !== '!white-radio') {
+      return;
+    }
+    let cValueParsed = parseInt(cValue) || 1;
+    // Wenn keine Zahl dann ist es ein String
+    if(isNaN(parseInt(cValue)) && cValue !== undefined) {
+      if(cValue === "list") {
+        this.client.say(this.currentChannel, `Available categories are ${this.listGenres()}`);
+      } else if(allGenresAvailable.includes(cValue)) {
+        this.sendRandomSongsFromGenre(cValue, cAmount);
+      } else {
+        this.client.say(this.currentChannel, `I dont have music for that genre, sorry :(`);
+      }
+    } else {
+      this.sendRandomSongs(cValueParsed);
+    }
+  }
+
+  listGenres = () => {
+    let allGenresAvailable = this.genresInList();
+    let splitedString = _.toString(allGenresAvailable).split(",");
+    let templateString = "";
+    splitedString.forEach((genre, index) => {
+      // check if last element
+      if(allGenresAvailable.length-1 === index) {
+        templateString = templateString + genre + "("+ this.songlistData[genre].length +")";
+      } else {
+        templateString = templateString + genre + "("+ this.songlistData[genre].length +"),";
+      }
+
+    })
+    return templateString;
+  }
+
+  genresInList = () => {
+    return Object.keys(this.songlistData).filter(key => this.songlistData[key].length);
   }
 
   onConnectedHandler = (addr, port) => {
@@ -110,6 +141,5 @@ class Bot {
 
   }
 }
-
 
 module.exports = {Bot: Bot}
