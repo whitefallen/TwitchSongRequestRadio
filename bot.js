@@ -46,7 +46,7 @@ class Bot {
     this.currentChannel = target.substring(1, target.length);
 
     this.radioCommand(commandName, commandValue, commandAmount);
-    this.songsLeftInGenre();
+
     console.log(`* Executed ${commandName} command`);
 
   }
