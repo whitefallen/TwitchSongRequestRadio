@@ -6,10 +6,38 @@
     "https://www.youtube.com/watch?v=ZwthxLtzYsI", // Papa Roach x Jeris Johnson - Last Resort
     "https://www.youtube.com/watch?v=zmgHe1l_v6A", // Bring Me The Horizon x Jeris Johnson - Can You Feel My Heart
     "https://www.youtube.com/watch?v=IxcxyGDD38E", // Ed Sheeran - Bad Habits feat. Bring Me The Horizon
-    "https://www.youtube.com/watch?v=dcu1A_EL_hQ", // Dreamcatcher - Odd eye BardCore(own Genre?)
     "https://www.youtube.com/watch?v=u9Dg-g7t2l4", // Disturbed - Sound of Silence
     "https://www.youtube.com/watch?v=YV4oYkIeGJc", // Distrubed - Land of Confuison
     "https://www.youtube.com/watch?v=POiWY1A91UI", // Korn - Word Up
+    "https://www.youtube.com/watch?v=mAxOhsrQRSs", // No Resolve - Set fire to the Rain (Adelle)
+    "https://www.youtube.com/watch?v=JVRPdLX5QUY", // No Resolve - Shivers (Ed Sheeran)
+    "https://www.youtube.com/watch?v=4n9Y2SNvBX0", // Rain Paris - Montero (Lil x Nas)
+    "https://www.youtube.com/watch?v=lyi4Srb43Pk", // Our Last night - Astronaut in the Ocean
+    "https://www.youtube.com/watch?v=XQkU8tdsUis", // Emils Bull - Survivor (Destinys Child)
+    "https://www.youtube.com/watch?v=sm3mKkgW2G0", // We Came as Romans - Glad You Came
+    "https://www.youtube.com/watch?v=Xe2C758enXA", // Jonathen Young - Sail
+    "https://www.youtube.com/watch?v=48abjOXZk7s", // Framing Hanley - Lolipop
+    "https://www.youtube.com/watch?v=EXuslEZsrc4", // State of Mine - Ganstas Paradise
+    "https://www.youtube.com/watch?v=YEaOGVWy21M", // Any Given Day - Diamonds
+    "https://www.youtube.com/watch?v=kQV8CA5eA3E", // Dope - Rebel Yell
+    "https://www.youtube.com/watch?v=m-Q0Ng61bT4", // Bad Wolves - Zombie
+    "https://www.youtube.com/watch?v=2jeOM6Kbj_s", // Cole Rolland & Lauren babic - Everytime we touch
+    "https://www.youtube.com/watch?v=3sZTUhNM-wE", // The weight of fatlas - All the things she said
+    "https://www.youtube.com/watch?v=bRhDy5oq-lM", // Designer Disguise - Chandelir
+    "https://www.youtube.com/watch?v=MBYNZE7lbw8", // The Compromise - Skater Boy
+    "https://www.youtube.com/watch?v=gMKC7mPUkYQ", // Sharks in Your Moth - Loose Yourself
+    "https://www.youtube.com/watch?v=GY6uJlI-t14", // Its a big ad - O Fortuna
+    "https://www.youtube.com/watch?v=SineiMKTOTA", // Toli Wild - bad guy
+    "https://www.youtube.com/watch?v=LTUoXHLzhK4", // Peyton Parrish - Bet on it
+    "https://www.youtube.com/watch?v=GU0GHr47iYo", // no resolve - surface pressure (encanto)
+    "https://www.youtube.com/watch?v=yur3e-A2ENQ", // Jonathan Young - Surface Pressure
+    "https://www.youtube.com/watch?v=Bg4HbJ9T4C0", // Jonathan Young - we dont talk about bruno
+    "https://www.youtube.com/watch?v=3Sy_OWn1Vik", // Matt Copley - We dont talk about bruno
+    "https://www.youtube.com/watch?v=-eRrtWqu36E", // Futakunchi Mana - King
+    "https://www.youtube.com/watch?v=oSf3Nqd0qnY", // Violet Orlandi - beggin
+    "https://www.youtube.com/watch?v=58sBcARtors", // Peyton Parrish - Animals
+    "https://www.youtube.com/watch?v=_WmADJ2aOVc", // Seraphim - Call out my name
+    "https://www.youtube.com/watch?v=bvGrfVlXAmY", // Jonathan young - legends never die
   ],
   "shanty" : [
     "https://www.youtube.com/watch?v=JRWw6jpKquo", // WELLERMAN COLLAB
@@ -21,7 +49,10 @@
     "https://www.youtube.com/watch?v=8j616idQwcE", // Leave Her, Johnny sea shanty
     "https://www.youtube.com/watch?v=mZCmLU0vRiA", // Sea Shanty Metal - "Randy Dandy Oh"
     "https://www.youtube.com/watch?v=38zuyOfL0hI", // Sea Shanty Metal - Man the Cannons
-    "https://www.youtube.com/watch?v=HGdUm5bpwPY"  // SEA SHANTY METAL - Roll The Chariot Along
+    "https://www.youtube.com/watch?v=HGdUm5bpwPY", // SEA SHANTY METAL - Roll The Chariot Along
+    "https://www.youtube.com/watch?v=azaoG3UbjAs", // SEA SHANTY METLA - Old Maui
+    "https://www.youtube.com/watch?v=CvckYuHBdaA"  // Caleb Hyles - Whiskey in the jar
+    "https://www.youtube.com/watch?v=Cv8gR9yNIv8", // Orbit Culture - Davy Jones
   ],
   "unholy": [
     "https://www.youtube.com/watch?v=7QXDnWRy6MI", // Sam Smith Unholy (org)
@@ -34,7 +65,6 @@
     "https://www.youtube.com/watch?v=oH6Qi4JMIyc", // Unholy - Sam Smith, Kim Petras - rain paris
     "https://www.youtube.com/watch?v=ArlniBm6ciI", // Unholy - Sam Smith, Kim Petras - anth
     "https://www.youtube.com/watch?v=hDzgQvjAkEU", // Unholy but it's gay - reinary
-    "https://www.youtube.com/watch?v=L2ZlLP9iveE"  // Unholy - Medieval Cover / Bardcore
   ],
   "heavy" : [
     "https://www.youtube.com/watch?v=wa6gzxdGACk", // CANTERVICE - Blackout
@@ -153,18 +183,24 @@
     "https://www.youtube.com/watch?v=kfDKBZzc6V8", // Motionless In White - Eternally Yours: Motion Picture Collection
     "https://www.youtube.com/watch?v=J6BpemCdUJs", // Another Life: Motion Picture Collection,
     "https://www.youtube.com/watch?v=0Qdm-sSysKI", // Set if off - Killer in the Mirror
-    "https://www.youtube.com/watch?v=hY9TVwgePxU",  // Dayseeker - Crying While You're Dancing
+    "https://www.youtube.com/watch?v=hY9TVwgePxU", // Dayseeker - Crying While You're Dancing
   
-  ],
-  "funny": [
-    "https://www.youtube.com/watch?v=--9kqhzQ-8Q", // Tom Cardy - Have you Checked you Butthole
-    "https://www.youtube.com/watch?v=76kp0mqDtDo", // Jan Böhmermann - baby got laugengebäck
-    "https://www.youtube.com/watch?v=SLbfqAY30GM", // Alligatoah - Nebenjob
-    "https://www.youtube.com/watch?v=GJY4VLbyWuw", // Jan Böhmermann - Wir sind Versandsoldaten
-    "https://www.youtube.com/watch?v=B7W4dAvZmQc", // Tom Cardy - The Ballad of Smokin Joa Rudeboy
-    "https://www.youtube.com/watch?v=GFokXnCCMf8", // Tom Cardy - Red Flags
-    "https://www.youtube.com/watch?v=3fHl9bxVT58", // Tom Cardy - Mixed Messages
   ],
   "popish": [
   ],
+  "bardcore": [
+    "https://www.youtube.com/watch?v=dcu1A_EL_hQ", // Dreamcatcher - Odd eye
+    "https://www.youtube.com/watch?v=L2ZlLP9iveE"  // Sam smith - Unholy
+  ],
+  "tomcardy": [
+    "https://www.youtube.com/watch?v=--9kqhzQ-8Q", // Tom Cardy - Have you Checked you Butthole
+    "https://www.youtube.com/watch?v=B7W4dAvZmQc", // Tom Cardy - The Ballad of Smokin Joa Rudeboy
+    "https://www.youtube.com/watch?v=GFokXnCCMf8", // Tom Cardy - Red Flags
+    "https://www.youtube.com/watch?v=3fHl9bxVT58", // Tom Cardy - Mixed Messages
+    "https://www.youtube.com/watch?v=2M_0pM8BcK0", // Tom Cardy - Read between the line
+    "https://www.youtube.com/watch?v=GbmP2c6TGKc", // Tom Cardy - Anxious
+    "https://www.youtube.com/watch?v=EHIHl8Rw6W8", // Tom Cardy - Big Breakfeast
+    "https://www.youtube.com/watch?v=hDAxBAsIbOE", // Tom Cardy - Monster Truck
+    "https://www.youtube.com/watch?v=wrJ6_GAprFE", // Tom Cardy - Hey i dont work here
+  ]
 }
