@@ -1,13 +1,18 @@
 const tmi = require('tmi.js');
 const _ = require('lodash');
+const io = require("socket.io-client");
+const {v4: uuidv4} = require('uuid');
+const {default: axios} = require("axios");
 
 class Bot {
   constructor(opts, songListData) {
+    this.id = uuidv4();
     this.opts = opts;
     this.songlistData = JSON.parse(JSON.stringify(songListData));
     this.client = this.createClient();
     this.channel = opts.channels;
     this.currentChannel = this.channel;
+    this.socket = this.createSocketIoClient();
   }
   createClient = () => {
     const botClient = new tmi.client(this.opts);
@@ -16,6 +21,13 @@ class Bot {
     botClient.on('disconnected', this.onDisconnectedHandler);
     return botClient;
   }
+
+  createSocketIoClient = () => {
+    const socket = io("http://localhost:3000");
+    socket.emit("connected", this.id);
+    return socket;
+  }
+
   connectClientWithChat = () => {
     this.client.connect();
   }
@@ -47,8 +59,6 @@ class Bot {
 
     this.radioCommand(commandName, commandValue, commandAmount);
 
-    console.log(`* Executed ${commandName} command`);
-
   }
   sendRandomSongs = (amount) => {
     let songs = this.pickRandomAcrossGenres(amount);
@@ -68,6 +78,11 @@ class Bot {
   }
   sendingSong = (song) => {
     this.client.say(this.currentChannel, `!sr ${song}`);
+    this.reportSongList();
+  }
+
+  reportSongList = async () => {
+    return await axios.post("http://localhost:3000/songlist", {id: this.id, songList: this.songlistData});
   }
   pickRandomAcrossGenres = (amount) => {
     let songlist = [];
@@ -111,6 +126,7 @@ class Bot {
     } else {
       this.sendRandomSongs(cValueParsed);
     }
+    console.log(`* Executed ${cName} with ${cValue} and ${cAmount} command`);
   }
 
   listGenres = () => {

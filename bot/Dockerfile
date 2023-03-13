@@ -10,4 +10,4 @@ RUN npm install nodemon -g
 RUN npm install pm2 -g 
 
 #ENTRYPOINT ["nodemon","-L","bot.js"]
-CMD ["pm2-runtime", "botmanager.js"]
+CMD ["pm2-runtime", "./src/botmanager.js"]

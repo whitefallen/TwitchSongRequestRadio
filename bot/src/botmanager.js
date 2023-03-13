@@ -1,10 +1,10 @@
 const axios = require("axios").default;
 const _ = require('lodash');
-const Bot = require("./bot.js").Bot;
+const Bot = require("./classes/bot.js").Bot;
 const cron = require("node-cron");
 require('json5/lib/register');
+require('dotenv').config()
 const JSON5 = require('json5');
-
 
 // Prepare Channels List
 let allChannels = process.env.CHANNELS || "";
@@ -17,7 +17,7 @@ if(Array.isArray(channels)) {
   botChannels.push(channels)
 }
 
-const songlistDataInitial = require('./songlist.json5');
+const songlistDataInitial = require('./../data/songlist.json5');
 const songListData = songlistDataInitial;
 
 botChannels.forEach((channel) => {

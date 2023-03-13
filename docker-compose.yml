@@ -5,7 +5,7 @@ services:
     mem_reservation: 30m
     cpus: 0.15
     build:
-      .
+      ./bot
     environment:
       - USERNAMEBOT=${USERNAMEBOT}
       - TOKENBOT=${TOKENBOT}
@@ -13,7 +13,15 @@ services:
     container_name: fallen-radio
     networks:
       - fallen-radio-network
-
+  redis-stack:
+    mem_limit: 100m
+    mem_reservation: 80m
+    cpus: 0.20
+    container_name: redis-stack
+    ports:
+      - '6379:6379'
+      - '8001:8001'
+    image: "redis/redis-stack:latest"
 networks:
   fallen-radio-network:
     driver: bridge
