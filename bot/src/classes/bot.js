@@ -24,7 +24,7 @@ class Bot {
 
   createSocketIoClient = () => {
     const socket = io("http://localhost:3000");
-    socket.emit("connected", this.id);
+    socket.emit("connected", {id: this.id, songList: this.songlistData});
     return socket;
   }
 
@@ -78,11 +78,12 @@ class Bot {
   }
   sendingSong = (song) => {
     this.client.say(this.currentChannel, `!sr ${song}`);
+    this.reportRequestedSong(song);
     this.reportSongList();
   }
 
   reportSongList = async () => {
-    return await axios.post("http://localhost:3000/songlist", {id: this.id, songList: this.songlistData});
+    await axios.post("http://localhost:3000/songlist", {id: this.id, songList: this.songlistData});
   }
   pickRandomAcrossGenres = (amount) => {
     let songlist = [];
@@ -155,6 +156,10 @@ class Bot {
 
   onDisconnectedHandler = () => {
 
+  }
+
+  reportRequestedSong = (song) => {
+    this.socket.emit("sending song", song);
   }
 }
 

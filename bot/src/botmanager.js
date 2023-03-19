@@ -43,7 +43,6 @@ cron.schedule('0 6 * * *', () => {
   newSongs.then((res) => {
     updateBotsSongList(res.data);
   })
-
 });
 
 const updateBotsSongList = (newSongList) => {

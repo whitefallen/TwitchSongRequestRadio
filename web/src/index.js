@@ -5,30 +5,45 @@ const io = require("socket.io")(httpServer, options);
 const redis = require('redis');
 const redisClient = redis.createClient({url:'redis://localhost:6379'});
 const bodyParser = require('body-parser');
+const data = [];
 
 redisClient.connect();
+redisClient.on('error', err => console.log('Redi Client Error', err));
 
-let data = [];
+//TODO USE TWIG TO RENDER LIST OF ACTIVE INSTANCES; AND SONGS
+
+io.on("connection", socket => {
+  socket.on("connected", (...args) => {
+    if(args) {
+      data.push({id: args[0].id, songList: args[0].songList});
+    }
+  });
+  socket.on("sending song", (...args) => {
+    if(args) {
+      redisClient.get(args[0]).then((data) => {
+        let tempNumb = Number(data);
+        tempNumb++
+        redisClient.set(args[0], tempNumb);
+      });
+    }
+  })
+});
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.get('/', (req, res) => {
-  console.log(data);
+app.get('/', (req, res) =>
   res.send('Hello World!')
   redisClient.set('string key', 'Hello World!', redis.print)
 })
 
 app.get('/songlist/:id', (req, res) => {
   let id = req.params.id;
-  if(data) {
-    data.forEach((bot) => {
-      if(bot.id === id) {
-        res.send(bot.songList);
-      } else {
-        res.send(`Not Data available for ${id}`);
-      }
-    })
+  let bot = data.find((botInstance) => botInstance.id === id);
+  if(bot) {
+    res.send(bot.songList);
+  } else {
+    res.send(`Not Data available for ${id}`);
   }
 })
 
@@ -37,20 +52,6 @@ app.post('/songlist', function (req, res) {
     data.find((botData) => botData.id = req.body.id).songList = req.body.songList;
   }
   res.end();
-});
-
-
-redisClient.on('error', err => console.log('Redi Client Error', err));
-
-
-
-io.on("connection", socket => {
-  socket.on("connected", (...args) => {
-    console.log(args);
-    if(args) {
-      data.push({id: args[0], songList: null});
-    }
-  });
 });
 
 httpServer.listen(3000);
