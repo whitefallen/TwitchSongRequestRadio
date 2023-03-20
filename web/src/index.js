@@ -5,6 +5,9 @@ const io = require("socket.io")(httpServer, options);
 const redis = require('redis');
 const redisClient = redis.createClient({url:'redis://localhost:6379'});
 const bodyParser = require('body-parser');
+
+const Twig = require("twig")
+
 const data = [];
 
 redisClient.connect();
@@ -32,10 +35,16 @@ io.on("connection", socket => {
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
-app.get('/', (req, res) =>
-  res.send('Hello World!')
-  redisClient.set('string key', 'Hello World!', redis.print)
-})
+app.set("twig options", {
+  allowAsync: true, // Allow asynchronous compiling
+  strict_variables: false
+});
+
+app.get('/', (req, res) => {
+  res.render('index.twig', {
+    message : "Hello World"
+  });
+});
 
 app.get('/songlist/:id', (req, res) => {
   let id = req.params.id;
@@ -45,7 +54,7 @@ app.get('/songlist/:id', (req, res) => {
   } else {
     res.send(`Not Data available for ${id}`);
   }
-})
+});
 
 app.post('/songlist', function (req, res) {
   if(req.body.id) {
