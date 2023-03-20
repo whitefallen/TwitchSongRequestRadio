@@ -42,7 +42,7 @@ app.set("twig options", {
 
 app.get('/', (req, res) => {
   res.render('index.twig', {
-    message : "Hello World"
+    data : data
   });
 });
 
