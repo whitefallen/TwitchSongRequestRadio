@@ -49,11 +49,13 @@ app.get('/', (req, res) => {
 app.get('/songlist/:id', (req, res) => {
   let id = req.params.id;
   let bot = data.find((botInstance) => botInstance.id === id);
+  let songs = null;
   if(bot) {
-    res.send(bot.songList);
-  } else {
-    res.send(`Not Data available for ${id}`);
+    songs = bot.songList
   }
+  res.render('./songs/list.twig', {
+    songs
+  })
 });
 
 app.post('/songlist', function (req, res) {

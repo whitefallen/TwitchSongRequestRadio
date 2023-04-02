@@ -48,8 +48,11 @@ class Bot {
     const msgArr = msg.split(' ');
     // Command name [!white-radio] args
     const commandName = msgArr[0];
+    if(commandName !== '!white-radio') {
+      return;
+    }
     // Command name !white-radio [args]
-    const commandValue = msgArr[1];
+    const commandValue = msgArr[1] || 1;
     // Command name !white-radio args1 [args2]
     const commandAmount = msgArr[2] || 1;
     // Get username
@@ -111,9 +114,6 @@ class Bot {
 
   radioCommand = (cName, cValue, cAmount) => {
     let allGenresAvailable = this.genresInList();
-    if(cName !== '!white-radio') {
-      return;
-    }
     let cValueParsed = parseInt(cValue) || 1;
     // Wenn keine Zahl dann ist es ein String
     if(isNaN(parseInt(cValue)) && cValue !== undefined) {
