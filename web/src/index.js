@@ -17,8 +17,9 @@ redisClient.on('error', err => console.log('Redi Client Error', err));
 
 io.on("connection", socket => {
   socket.on("connected", (...args) => {
+    console.log("connected")
     if(args) {
-      data.push({id: args[0].id, songList: args[0].songList});
+      data.push({id: args[0].id, songList: args[0].songList, socketId: socket.id});
     }
   });
   socket.on("sending song", (...args) => {
@@ -29,6 +30,14 @@ io.on("connection", socket => {
         redisClient.set(args[0], tempNumb);
       });
     }
+  })
+  socket.on("disconnected-instance", (...args) => {
+    console.log(...args);
+    console.log("disconnected custom");
+  })
+  socket.on("disconnecting", () => {
+    console.log("disconnected event");
+    // remove bot from array
   })
 });
 
