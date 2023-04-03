@@ -25,7 +25,7 @@ class Bot {
   createSocketIoClient = () => {
     const socket = io("http://localhost:3000");
     socket.on("connect", () => {
-      socket.emit("connected", {id: this.id, songList: this.songlistData});
+      socket.emit("connected", {id: this.id, songList: this.songlistData, channel: this.currentChannel});
     })
     socket.on("disconnect", () => {
       socket.emit("disconnected-instance", {id: this.id});

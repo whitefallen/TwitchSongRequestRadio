@@ -1,25 +1,23 @@
-const app = require("express")();
+const express = require("express");
+const app = express();
 const httpServer = require("http").createServer(app);
-const options = { /* ... */ };
-const io = require("socket.io")(httpServer, options);
+const io = require("socket.io")(httpServer);
 const redis = require('redis');
 const redisClient = redis.createClient({url:'redis://localhost:6379'});
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const Twig = require("twig")
 
-const data = [];
+let data = [];
 
 redisClient.connect();
 redisClient.on('error', err => console.log('Redi Client Error', err));
 
-//TODO USE TWIG TO RENDER LIST OF ACTIVE INSTANCES; AND SONGS
-
 io.on("connection", socket => {
   socket.on("connected", (...args) => {
-    console.log("connected")
     if(args) {
-      data.push({id: args[0].id, songList: args[0].songList, socketId: socket.id});
+      data.push({id: args[0].id, songList: args[0].songList, socketId: socket.id, channel: args[0].channel});
     }
   });
   socket.on("sending song", (...args) => {
@@ -32,15 +30,14 @@ io.on("connection", socket => {
     }
   })
   socket.on("disconnected-instance", (...args) => {
-    console.log(...args);
-    console.log("disconnected custom");
+    data = data.filter((elements) => {return elements.id !== socket.id});
   })
   socket.on("disconnecting", () => {
-    console.log("disconnected event");
-    // remove bot from array
+    data = data.filter((elements) => {return elements.id !== socket.id});
   })
 });
 
+app.use(express.static(path.join(__dirname, 'public')))
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
@@ -59,11 +56,14 @@ app.get('/songlist/:id', (req, res) => {
   let id = req.params.id;
   let bot = data.find((botInstance) => botInstance.id === id);
   let songs = null;
+  let channel = null;
   if(bot) {
     songs = bot.songList
+    channel = bot.channel
   }
   res.render('./songs/list.twig', {
-    songs
+    songs,
+    channel
   })
 });
 
@@ -75,4 +75,3 @@ app.post('/songlist', function (req, res) {
 });
 
 httpServer.listen(3000);
-// WARNING !!! app.listen(3000); will not work here, as it creates a new HTTP server

@@ -28,14 +28,14 @@
   </head>
   <body>
       <main>
-          <h1> Songs for {{ instanceId }}</h1>
+          <h1> Songs for {{ channel }}</h1>
           <ul>
               {% for key, value in songs %}
                 <li>
                     {{ key }}
                     <ul>
                         {% for song in value %}
-                            <li><a href="{{ song }}"{{ song }}<a></li>
+                            <li><a href="{{ song }}">{{ song }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>
