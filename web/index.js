@@ -22,10 +22,10 @@ io.on("connection", socket => {
   });
   socket.on("sending song", (...args) => {
     if(args) {
-      redisClient.get(args[0]).then((data) => {
+      redisClient.get(`${args[0].channel}_${args[0].song}`).then((data) => {
         let tempNumb = Number(data);
         tempNumb++
-        redisClient.set(args[0], tempNumb);
+        redisClient.set(`${args[0].channel}_${args[0].song}`, tempNumb);
       });
     }
   })

@@ -164,7 +164,7 @@ class Bot {
   }
 
   reportRequestedSong = (song) => {
-    this.socket.emit("sending song", song);
+    this.socket.emit("sending song", {channel: this.channel, song: song});
   }
 }
 
