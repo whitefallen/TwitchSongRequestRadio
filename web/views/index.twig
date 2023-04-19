@@ -1,17 +1,55 @@
   <!doctype html>
   <html lang="en">
   <head>
-      <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
-      <link href="./styles/style.css" rel="stylesheet" type="text/css">
+    <title>Channel Lists</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-      <main>
-          <ul>
-              {% for entry in data %}
-                  <li><a href="./songlist/{{ entry.id }}">{{ entry.id }}</a></li>
-              {% endfor %}
-          </ul>
-
-      </main>
+  <body class="flex flex-col h-screen max-h-screen">
+  <header>
+    <nav class="bg-gray-800">
+      <div class="max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex flex-shrink-0 items-center">
+              <span class="text-white rounded-md px-3 py-2 font-medium">TwitchSongRequestRadio</span>
+            </div>
+            <div class="sm:ml-6 sm:block">
+              <div class="flex space-x-4">
+                <a href="/" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex flex-col md:flex-row overflow-hidden">
+    <aside class="flex bg-gray-900 text-white max-w-3xl px-2 sm:px-6 lg:px-8 min-h-screen">
+      <div>
+        <ul class="px-3 py-2">
+          {% for entry in data %}
+            <li class="px-3 py-2">
+              <a href="./songlist/{{ entry.id }}">{{ entry.channel }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </aside>
+    <div class="flex flex-1 flex-col">
+      <section class="flex px-2 sm:px-6 lg:px-8 py-2 overflow-y-auto mb-6">
+        <ul class="px-3 py-2">
+          {% for entry in data %}
+            <li>
+              <a href="./songlist/{{ entry.id }}">{{ entry.channel }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section class="flex fixed bottom-0 h-5">
+        Footer
+      </section>
+    </div>
+  </main>
   </body>
   </html>

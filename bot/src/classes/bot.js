@@ -69,10 +69,16 @@ class Bot {
 
   }
   sendRandomSongs = (amount) => {
+    if(amount > 5) {
+      amount = 5;
+    }
     let songs = this.pickRandomAcrossGenres(amount);
     this.handlingSendingSong(songs);
   }
   sendRandomSongsFromGenre = (genre, amount) => {
+    if(amount > 5) {
+      amount = 5;
+    }
     let songs = this.pickRandomGenres(genre, amount);
     this.handlingSendingSong(songs);
   }
