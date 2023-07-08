@@ -19,9 +19,14 @@ services:
     cpus: 0.20
     container_name: redis-stack
     ports:
-      - '6379:6379'
       - '8001:8001'
     image: "redis/redis-stack:latest"
+  fallen-web-api:
+    build: ./web
+    networks:
+      - fallen-radio-network
+    ports:
+      - "3000:3000"
 networks:
   fallen-radio-network:
     driver: bridge
