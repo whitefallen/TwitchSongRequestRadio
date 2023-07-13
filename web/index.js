@@ -3,7 +3,7 @@ const app = express();
 const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer);
 const redis = require('redis');
-const redisClient = redis.createClient({url:'redis://localhost:6379'});
+const redisClient = redis.createClient({url: 'redis://redis-stack:6379'});
 const bodyParser = require('body-parser');
 const path = require('path');
 

@@ -17,8 +17,8 @@ if(Array.isArray(channels)) {
   botChannels.push(channels)
 }
 
-const songlistDataInitial = require('./../data/songlist.json5');
-const songListData = songlistDataInitial;
+const songListDataInitial = require('./../data/songlist.json5');
+const songListData = songListDataInitial;
 
 botChannels.forEach((channel) => {
   let pseudoArray = [channel];

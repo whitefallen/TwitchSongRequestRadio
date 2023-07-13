@@ -23,7 +23,7 @@ class Bot {
   }
 
   createSocketIoClient = () => {
-    const socket = io("http://localhost:3000");
+    const socket = io("http://fallen-web-api:3000");
     socket.on("connect", () => {
       socket.emit("connected", {id: this.id, songList: this.songlistData, channel: this.currentChannel});
     })
@@ -97,7 +97,7 @@ class Bot {
   }
 
   reportSongList = async () => {
-    await axios.post("http://localhost:3000/songlist", {id: this.id, songList: this.songlistData});
+    await axios.post("http://fallen-web-api:3000/songlist", {id: this.id, songList: this.songlistData});
   }
   pickRandomAcrossGenres = (amount) => {
     let songlist = [];

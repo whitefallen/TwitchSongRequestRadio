@@ -13,11 +13,15 @@ services:
     container_name: fallen-radio
     networks:
       - fallen-radio-network
+    depends_on:
+      - fallen-web-api
   redis-stack:
     mem_limit: 100m
     mem_reservation: 80m
     cpus: 0.20
     container_name: redis-stack
+    networks:
+      - fallen-radio-network
     ports:
       - '8001:8001'
     image: "redis/redis-stack:latest"
@@ -27,6 +31,8 @@ services:
       - fallen-radio-network
     ports:
       - "3000:3000"
+    depends_on:
+      - redis-stack
 networks:
   fallen-radio-network:
     driver: bridge
