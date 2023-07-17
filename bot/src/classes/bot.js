@@ -41,9 +41,10 @@ class Bot {
     this.client.disconnect();
   }
 
-  updateSongList = (songs) => {
+  updateSongList = async (songs) => {
     console.log(`Updated ${this.channel}'s songlist`);
     this.songlistData = JSON.parse(JSON.stringify(songs));
+    await reportSongList();
   }
 
   onMessageHandler = (target, context, msg, self) => {

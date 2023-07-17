@@ -18,6 +18,7 @@ io.on("connection", socket => {
   socket.on("connected", (...args) => {
     if(args) {
       data.push({id: args[0].id, songList: args[0].songList, socketId: socket.id, channel: args[0].channel});
+      console.log(`Connection reviced with songlist for channel ${args[0].channel}`);
     }
   });
   socket.on("sending song", (...args) => {
@@ -70,6 +71,7 @@ app.get('/songlist/:id', (req, res) => {
 app.post('/songlist', function (req, res) {
   if(req.body.id) {
     data.find((botData) => botData.id = req.body.id).songList = req.body.songList;
+    console.log(`Recived songlist for ${req.body.id}`);
   }
   res.end();
 });
