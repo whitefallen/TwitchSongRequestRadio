@@ -16,9 +16,6 @@ services:
     depends_on:
       - fallen-web-api
   redis-stack:
-    mem_limit: 100m
-    mem_reservation: 80m
-    cpus: 0.20
     container_name: redis-stack
     networks:
       - fallen-radio-network
