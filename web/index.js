@@ -53,18 +53,26 @@ app.get('/', (req, res) => {
   });
 });
 
-app.get('/songlist/:id', (req, res) => {
+app.get('/songlist/:id', async (req, res) => {
   let id = req.params.id;
   let bot = data.find((botInstance) => botInstance.id === id);
   let songs = null;
   let channel = null;
+  let dbData = [];
   if(bot) {
+    let dbDataKeys = await redisClient.keys(`${bot.channel[0]}_*`);
+    for(const dbKey of dbDataKeys) {
+      await redisClient.get(dbKey).then((data) => {
+        dbData.push({name: dbKey.split('_')[1], count: data});
+      });
+    };
     songs = bot.songList
     channel = bot.channel
   }
   res.render('./songs/list.twig', {
     songs,
-    channel
+    channel,
+    history:dbData
   })
 });
 

@@ -39,8 +39,10 @@
       </div>
     </aside>
     <div class="flex flex-1 flex-col">
+      <h1 class="px-3 py-2"> Songs for {{ channel }}</h1>
       <section class="flex px-2 sm:px-6 lg:px-8 py-2 overflow-y-auto mb-6">
-        <h1> Songs for {{ channel }}</h1>
+      <div>
+        <span>Songs</span>
         <ul class="px-3 py-2">
           {% for key, value in songs %}
             <li id="{{ key }}">
@@ -53,6 +55,18 @@
             </li>
           {% endfor %}
         </ul>
+      </div>
+      <div>
+        <span>History of Songs</span>
+        <ul class="px-3 py-2">
+          {% for song in history %}
+            <li id="{{ song.name }}">
+              {{ song.name }}  ({{ song.count }})
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
       </section>
       <section class="flex fixed bottom-0 h-5">
         Footer
