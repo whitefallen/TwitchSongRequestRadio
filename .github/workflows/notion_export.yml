@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 18.0.0
 
-      - run: yarn
+      - run: cd notion_exporter && npm install
 
       - run: node ./notion_exporter/src/index.js
         env:
