@@ -49,7 +49,7 @@ async function main() {
     group[genre].push(song);
     return group;
   }, {});
-  await fs.writeFile("../songlist.json5", JSON.stringify(normalizedDataSorted,null, 2));
+  await fs.writeFile("./songlist.json5", JSON.stringify(normalizedDataSorted,null, 2));
 }
 
 function normalizeDataItem(item) {

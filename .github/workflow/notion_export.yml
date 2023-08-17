@@ -16,7 +16,7 @@ jobs:
 
       - run: yarn
 
-      - run: node .
+      - run: node ./notion_exporter/src/index.js
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
