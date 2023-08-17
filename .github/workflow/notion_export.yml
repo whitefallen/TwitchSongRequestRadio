@@ -1,0 +1,33 @@
+name: Export Notion SongList
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  notion_export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.0.0
+
+      - run: yarn
+
+      - run: node .
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+
+      - name: Add to git repo
+        run: |
+          git add .
+          git config --global user.name ${{ secrets.USER_NAME }}
+          git config --global user.email ${{ secrets.USER_EMAIL }} 
+          git commit -m "[Github Action] SongList export" || echo "Nothing to push"
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
