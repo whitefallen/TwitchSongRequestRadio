@@ -1,21 +1,496 @@
 {
-  "Metal": [
+  "uncategorized": [
     {
-      "link": "White Fallen",
-      "genre": "Metal",
-      "title": "whitefallen123"
-    },
-    {
-      "link": "White Fallen",
-      "genre": "Metal",
-      "title": "whitefallen123"
+      "link": "https://www.youtube.com/watch?v=wJEocMs3JGg",
+      "genre": "uncategorized",
+      "title": "Scandroid x Celldweller - Waste My Time"
     }
   ],
-  "Rock": [
+  "heavy": [
     {
-      "link": "White Fallen",
-      "genre": "Rock",
-      "title": "whitefallen123"
+      "link": "https://www.youtube.com/watch?v=SOctyXxCm-4",
+      "genre": "heavy",
+      "title": "Rob Zombie - Dragula"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=YfjTZLxekig",
+      "genre": "heavy",
+      "title": "Salvia - Click Click Boom"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=JC9jhtuscZ4",
+      "genre": "heavy",
+      "title": "Dope - Die MF Die"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=QiKK7ULsqXk",
+      "genre": "heavy",
+      "title": "Drowning Pool - Sinner"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=wbZHhChx5yo",
+      "genre": "heavy",
+      "title": "Drowning Pool - Bodies"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=gCSs5QggRUk",
+      "genre": "heavy",
+      "title": "Drowning Pool - Tear Away"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=GNohq2JJMQY",
+      "genre": "heavy",
+      "title": "Static-X - Cold"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=vMCbJB4yNXo",
+      "genre": "heavy",
+      "title": "Static-X - The Only"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ihgc5LQbjg8",
+      "genre": "heavy",
+      "title": "Korn - Freak On a Leash"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=msTVnawtLVw",
+      "genre": "heavy",
+      "title": "Korn - Twisted Transitor"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Qf1FHLjoRRc",
+      "genre": "heavy",
+      "title": "Korn - Coming Undone"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=vlp1CEA7EN0",
+      "genre": "heavy",
+      "title": "Korn - Evolution"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=BDuEdedG7Hk",
+      "genre": "heavy",
+      "title": "Siamese - You're Not Alone"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=dm0O9xYIvpQ",
+      "genre": "heavy",
+      "title": "Siamese - Rather Be Lonely"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=qb1nwhkGNWU",
+      "genre": "heavy",
+      "title": "Siamese - Can't Force The Love"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=sOyDORoMfwk",
+      "genre": "heavy",
+      "title": "Solence - Vampire"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=gYuXvrLXojs",
+      "genre": "heavy",
+      "title": "Solence - Thunder"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=_7DE_VnbyYI",
+      "genre": "heavy",
+      "title": "Solence - Paralyzed"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=-BJJ5obNGGQ",
+      "genre": "heavy",
+      "title": "Solence - Waves"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Mg7SUe8nOik",
+      "genre": "heavy",
+      "title": "Dayseeker - Neon Grave"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=KV5ffXxFI38",
+      "genre": "heavy",
+      "title": "Dayseeker - Sleeptalk"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=2ZtfU8eRENw",
+      "genre": "heavy",
+      "title": "Dayseeker - Without you"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=uCXGfwqljeQ",
+      "genre": "heavy",
+      "title": "Citizen Soldier ft. Lø Spirit - Limit"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=7ViIny2YZH0",
+      "genre": "heavy",
+      "title": "Three days grace - so called life"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ph9KP2_lT5Q",
+      "genre": "heavy",
+      "title": "Three days grace - i hate everything about you"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=xqds0B_meys",
+      "genre": "heavy",
+      "title": "Three days grace - animal i have become"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=lL2ZwXj1tXM",
+      "genre": "heavy",
+      "title": "Three days grace - never too late"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=V5OC2IZW3Pg",
+      "genre": "heavy",
+      "title": "Halestorm - I Miss the Misery"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=e_S9VvJM1PI",
+      "genre": "heavy",
+      "title": "Icon Fore Hire - Make a move"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=6JbL81RsUFA",
+      "genre": "heavy",
+      "title": "Versus Me - Terrified"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=8BMXHQg9WqE",
+      "genre": "heavy",
+      "title": "I Prevail - Bad Things"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=SV6pvII1eFU",
+      "genre": "heavy",
+      "title": "Nothing more - Dont Stop"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Q6c8X_s1h9Y",
+      "genre": "heavy",
+      "title": "Nothing more - Go to War"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=yE9l1dfQMj0",
+      "genre": "heavy",
+      "title": "Nothing More - I'll be Okay"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=iWIADZKU9dw",
+      "genre": "heavy",
+      "title": "Flyleaf - I'm so sick"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=l8Bhlg16d8E",
+      "genre": "heavy",
+      "title": "Andy Black - Ribcage"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=8fEoWA9Vz3A",
+      "genre": "heavy",
+      "title": "Andy Black - We Dont have to Dance"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=RZYzcPwQN-8",
+      "genre": "heavy",
+      "title": "In this Moment - As above so below"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=03X0B6u-AxM",
+      "genre": "heavy",
+      "title": "In This Moment - Sick like me"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Aw4HXskdTtg",
+      "genre": "heavy",
+      "title": "In This Moment - The in-between"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=txBfhpm1jI0",
+      "genre": "heavy",
+      "title": "The Pretty Reckless - Make me wanna die"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=_ao2u7F_Qzg",
+      "genre": "heavy",
+      "title": "The Rasmus - In the Shadows"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=JjPIOuFtWAI",
+      "genre": "heavy",
+      "title": "30 Seconds to Mars - The Kill"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=vc6vs-l5dkc",
+      "genre": "heavy",
+      "title": "Panic at the disco - i write sins not tragedies"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=IPXIgEAGe4U",
+      "genre": "heavy",
+      "title": "Panic at the disco - High Hopes"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=piKG6j4E65E",
+      "genre": "heavy",
+      "title": "Panic at the disco - Emperors new clothes"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=oVP0sg-yvHI",
+      "genre": "heavy",
+      "title": "Citizen Soldier - Never Ending Nightmares"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=9GTTwVSr2sM",
+      "genre": "heavy",
+      "title": "Set if off - i'll sleep when i'm dead"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=LRsm8JksmKM",
+      "genre": "heavy",
+      "title": "Set if off - Loney Dance"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=oniytGOUi3c",
+      "genre": "heavy",
+      "title": "Set if off - Killer in the Mirror"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=VgluSNPFRLA",
+      "genre": "heavy",
+      "title": "Set if off - Midnight Thoughts"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Jmbc_lTljqI",
+      "genre": "heavy",
+      "title": "Set if off - Why Worry"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=5oYRvOHW2iw",
+      "genre": "heavy",
+      "title": "Coldrain - Coexist"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=TB504NZpQnY",
+      "genre": "heavy",
+      "title": "Caskets - By the Sound"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=00NEUSkpA-g",
+      "genre": "heavy",
+      "title": "The Raven Age - Parasite"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=VzEYQLANWgo",
+      "genre": "heavy",
+      "title": "Daughty - Seperate Ways"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=baQVB2W1KAQ",
+      "genre": "heavy",
+      "title": "Starset - Waiting on the sky to change"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=d-ULISYZXhM",
+      "genre": "heavy",
+      "title": "Bury Tomorrow - Heretic"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=jMN3VRbftmA",
+      "genre": "heavy",
+      "title": "We Came as Romans - Black Hole"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=hqRFWCbQ9Lk",
+      "genre": "heavy",
+      "title": "Kamelot - Opus of the Night"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=t2d3EDNDCn8",
+      "genre": "heavy",
+      "title": "Wage war - Low"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=NXn-dI9fFko",
+      "genre": "heavy",
+      "title": "Wage war - Circle the Drain"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=wUfkqYWxLjk",
+      "genre": "heavy",
+      "title": "Memphis may fire - Heavy is the Weight"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=6HzE3KgHzHU",
+      "genre": "heavy",
+      "title": "Memphis may fire - Somebody"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=OCdQ4hRi69k",
+      "genre": "heavy",
+      "title": "Memphis may fire - Bleed me dry"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=1YPBNAP-3DY",
+      "genre": "heavy",
+      "title": "Memphis may fire - Left for dead"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=4FsO17x6QGE",
+      "genre": "heavy",
+      "title": "The Plot In You - Enemy"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=_P3Q6VkNrwg",
+      "genre": "heavy",
+      "title": "The Plot In You - Left Behind"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ocpDEOXABWg",
+      "genre": "heavy",
+      "title": "Thousand Foot Krutch: Courtesy Call"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=jvAmUKgH7HI",
+      "genre": "heavy",
+      "title": "Disturbed - Hell"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=dwxUgefMStM",
+      "genre": "heavy",
+      "title": "Disturbed - Animal"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=e1UUAhZ3JzM",
+      "genre": "heavy",
+      "title": "Disturbed - The Light"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Auuqlcom6tM",
+      "genre": "heavy",
+      "title": "Disturbed - Immortalized"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=XiXb-6j4R98",
+      "genre": "heavy",
+      "title": "Disturbed - Unstoppable"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=fpUpVznI4Yc",
+      "genre": "heavy",
+      "title": "Disturbed - Bad Man"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=9Cb872pCbMs",
+      "genre": "heavy",
+      "title": "A day to remembver - miracle"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=CHXmHssCHY8",
+      "genre": "heavy",
+      "title": "As I Lay Dying - A Greater Foundation"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Q0wbyQRRQJA",
+      "genre": "heavy",
+      "title": "AS I LAY DYING - My Own Grave"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=POTqjUddrhk",
+      "genre": "heavy",
+      "title": "Disciple - Game On"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=L8NznCl8XpM",
+      "genre": "heavy",
+      "title": "Imminence - Infectious"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=_SQJlNcNvOM",
+      "genre": "heavy",
+      "title": "Imminence - Temptation"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=nYwA6phqNEA",
+      "genre": "heavy",
+      "title": "Imminence - Ghost"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=rbFaVDfkI00",
+      "genre": "heavy",
+      "title": "Motionless In White - Masterpiece"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=uVysW4TWXS0",
+      "genre": "heavy",
+      "title": "Motionless In White - Another Life"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=UkI4KejmSfY",
+      "genre": "heavy",
+      "title": "Breaking Benjamin - So Cold"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=lMjqGl3UDCk",
+      "genre": "heavy",
+      "title": "Breaking Benjamin - Blood"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=0MUeHF1SOm8",
+      "genre": "heavy",
+      "title": "Breaking Benjamin The Diary Of Jane"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=8No28NDPEJc",
+      "genre": "heavy",
+      "title": "Too Close To Touch - \"Nerve Endings”"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=qHbjoN3hUmk",
+      "genre": "heavy",
+      "title": "Too Close To Touch - \"Sympathy”"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=HSpaZjR_ULE",
+      "genre": "heavy",
+      "title": "BAD OMENS - Limits"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ouW_RCAI0sg",
+      "genre": "heavy",
+      "title": "BAD OMENS - THE DEATH OF PEACE OF MIND"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Aibxit_PpAg",
+      "genre": "heavy",
+      "title": "BAD OMENS - Like A Villain"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ZMAy5K8vEGc",
+      "genre": "heavy",
+      "title": "BAD OMENS - The Grey"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=ekU1dQjMsOQ",
+      "genre": "heavy",
+      "title": "BAD OMENS - Just Pretend"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=wa6gzxdGACk",
+      "genre": "heavy",
+      "title": "CANTERVICE - Blackout"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Dd4ROWtJYSQ",
+      "genre": "heavy",
+      "title": "CANTERVICE - Void"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=hcvnypM8ft4",
+      "genre": "heavy",
+      "title": "Richy Nix - Without You"
     }
   ]
 }
