@@ -1,0 +1,26 @@
+name: Convert Issue to Notion
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  convert_issue_to_notion:
+    if: contains(github.event.issue.labels.*.name, 'new song')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.0.0
+
+      - run: cd convert_issue_to_notion && npm install
+
+      - run: node ./convert_issue_to_notion/src/index.js
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          ISSUSE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_BODY: ${{ github.event.issue.body }}

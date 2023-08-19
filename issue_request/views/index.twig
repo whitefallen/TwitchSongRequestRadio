@@ -1,0 +1,43 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <title>Issue a Request</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
+    <link href="/styles/style.css" rel="stylesheet" type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="flex flex-col h-screen max-h-screen">
+  <header>
+    <nav class="bg-gray-800">
+
+    </nav>
+  </header>
+  <main class="flex flex-col md:flex-row overflow-hidden">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Reuqest a Song for Botlist</h1>
+        <div>
+          <form action="/sendToGitHub" method="POST">
+            <div class="form-group">
+              <label for="songName">Song Info</label>
+              <input type="text" class="form-control" id="songInfo" name="songInfo" placeholder="Enter Song Info">
+            </div>
+            <div class="form-group">
+              <label for="songLink">Song Link</label>
+              <input type="text" class="form-control" id="songLink" name="songLink" placeholder="Enter Song Link">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  </body>
+  </html>

@@ -1,5 +1,9 @@
 bot/node_modules/
 notion_exporter/node_modules/
 web/node_modules/
+convert_issue_to_notion/node_modules/
+issue_request/node_modules/
 
 .env
+
+

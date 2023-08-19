@@ -11,7 +11,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const Twig = require("twig")
-console.log(process.env.NOTION_API_KEY);
+
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID;
 
@@ -89,47 +89,5 @@ app.post('/songlist', function (req, res) {
   }
   res.end();
 });
-
-app.get('/notion', (req, res) => {
-  addToDatabase(databaseId, 'whitefallen123', 'White Fallen');
-  res.end();
-})
-
-async function addToDatabase(databaseId, username, name, status, date) {
-  try {
-      const response = await notion.pages.create({
-          parent: {
-              database_id: databaseId,
-          },
-          properties: {
-              'ID': {
-                  type: 'title',
-                  title: [
-                  {
-                      type: 'text',
-                      text: {
-                          content: username,
-                      },
-                  },
-                  ],
-              },
-              'Name' : {
-                      type: 'rich_text',
-                      rich_text: [
-                      {
-                          type: 'text',
-                          text: {
-                              content: name,
-                          },
-                      }
-                      ],
-              },
-          }    
-      });
-      console.log(response);
-  } catch (error) {
-      console.error(error.body);
-  }
-}
 
 httpServer.listen(3000);
