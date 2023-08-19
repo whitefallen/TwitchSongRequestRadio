@@ -57,7 +57,7 @@ function normalizeDataItem(item) {
 
   return {
     link: Link.url,
-    genre: Genre.select.name ?? 'uncategorized'',
+    genre: Genre.select?.name ?? 'uncategorized',
     title: Name.title[0]?.plain_text ?? '',
   }
 }
