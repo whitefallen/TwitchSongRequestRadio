@@ -5,11 +5,11 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const getSongTitleFromIssue = (issue_title) => {
-  return issue_title.substr(issue_title.indexOf('[New Song] '));
+  return issue_title.split('[New Song] ')[1];
 }
 
 const getSongLinkFromIssue = (issue_body) => {
-  return issue_body.substr(issue_body.indexOf('Song Link: '));
+  return issue_body.split('Song Link: ')[1];
 }
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID;
