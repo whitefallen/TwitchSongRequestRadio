@@ -4,6 +4,13 @@ const { Client } = require('@notionhq/client');
 const dotenv = require('dotenv');
 dotenv.config();
 
+const getSongTitleFromIssue = (issue_title) => {
+  return issue_title.substr(issue_title.indexOf('[New Song] '));
+}
+
+const getSongLinkFromIssue = (issue_body) => {
+  return issue_body.substr(issue_body.indexOf('Song Link: '));
+}
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 const databaseId = process.env.NOTION_DATABASE_ID;
 const songTitle = getSongTitleFromIssue(process.env.ISSUE_TITLE) ?? 'error';
@@ -39,13 +46,7 @@ async function addToDatabase(databaseId, songName, songList,) {
   }
 }
 
-const getSongTitleFromIssue = (issue_title) => {
-  return issue_title.substr(issue_title.indexOf('[New Song] '));
-}
 
-const getSongLinkFromIssue = (issue_body) => {
-  return issue_body.substr(issue_body.indexOf('Song Link: '));
-}
 
 async function main() {
   await addToDatabase(databaseId, songTitle, songLink)
