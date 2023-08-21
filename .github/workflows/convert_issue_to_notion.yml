@@ -6,7 +6,7 @@ on:
 
 jobs:
   convert_issue_to_notion:
-    if: contains(github.event.issue.labels.*.name, 'new song')
+    if: ${{contains(github.event.issue.labels.*.name, 'new song') && contains(github.event.issue.labels.*.name, 'approved')}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
