@@ -38,6 +38,8 @@
     "https://www.youtube.com/watch?v=58sBcARtors", // Peyton Parrish - Animals
     "https://www.youtube.com/watch?v=_WmADJ2aOVc", // Seraphim - Call out my name
     "https://www.youtube.com/watch?v=bvGrfVlXAmY", // Jonathan young - legends never die
+    "https://www.youtube.com/watch?v=JK97Xt9T6q0", // Rain Paris - K/DA Villain
+    "https://www.youtube.com/watch?v=i9oofxQ02kM", // VRSTY - Cry me a River
   ],
   "shanty" : [
     "https://www.youtube.com/watch?v=JRWw6jpKquo", // WELLERMAN COLLAB
@@ -82,6 +84,7 @@
     "https://www.youtube.com/watch?v=UkI4KejmSfY", // Breaking Benjamin - So Cold
     "https://www.youtube.com/watch?v=uVysW4TWXS0", // Motionless In White - Another Life
     "https://www.youtube.com/watch?v=rbFaVDfkI00", // Motionless In White - Masterpiece
+    "https://www.youtube.com/watch?v=aC5ZKDfr0CY", // Motionless In White - Werewolf
     "https://www.youtube.com/watch?v=nYwA6phqNEA", // Imminence - Ghost
     "https://www.youtube.com/watch?v=_SQJlNcNvOM", // Imminence - Temptation
     "https://www.youtube.com/watch?v=L8NznCl8XpM", // Imminence - Infectious
@@ -164,10 +167,28 @@
     "https://www.youtube.com/watch?v=JC9jhtuscZ4", // Dope - Die MF Die
     "https://www.youtube.com/watch?v=YfjTZLxekig", // Salvia - Click Click Boom
     "https://www.youtube.com/watch?v=SOctyXxCm-4", // Rob Zombie - Dragula
+    "https://www.youtube.com/watch?v=2jyRFxvjzfA", // Concrete Castles - So Addicted
+    "https://www.youtube.com/watch?v=Gz9_j1SpX5E", // Babymetal - Metalizm
+    "https://www.youtube.com/watch?v=jcemHIqmkYI", // Sabaton - Night Witches
+    "https://www.youtube.com/watch?v=UQ-Fb90GBhE", // Sabaton - Primo Victoria
+    "https://www.youtube.com/watch?v=-AFdwoyNT24", // Sabaton - Attack of the Dead Man
+    "https://www.youtube.com/watch?v=usrFCZpRwGo", // Sabaton - The Unkillable Soldier
   ],
   "anime": [
   ],
   "electro": [
+    "https://www.youtube.com/watch?v=vga1Tn5bXVo", // Scandroid - Writing's On The Wall (DEADLIFE Remix)
+    "https://www.youtube.com/watch?v=V8EdR3uO1A4", // Celldweller - Frozen (Celldweller vs. Blue Stahli),
+    "https://www.youtube.com/watch?v=akqYdmsLw2c", // Celldweller - Tainted (Remix by Paul Udarov)
+    "https://www.youtube.com/watch?v=Ec-f8ciTk20", // Essenger - Downfall (feat. Lexi Norton)
+    "https://www.youtube.com/watch?v=fv3VGOl5WsA", // Essenger - Sanctum Eternal
+    "https://www.youtube.com/watch?v=lM4LONVdgRM", // Essenger - BLOODSUCKER!
+    "https://www.youtube.com/watch?v=mIqdgAWCd-4", // Essenger - Plague Doctor
+    "https://www.youtube.com/watch?v=U0xis9Imedw", // Essenger - Divine Virus
+    "https://www.youtube.com/watch?v=lgfvpC7zw0k", // Essenger - Tenebrous
+    "https://www.youtube.com/watch?v=M4BK-BXOVeg", // Satellite Empire & Blue Stahli - Apocrypha III: Eternal Vespers
+    "https://www.youtube.com/watch?v=I_qskCKAlFA", // Satellite Empire & DREAMOIR - Apocrypha I: Warrior's Vigil
+    "https://www.youtube.com/watch?v=tpJ-2xX5ZMg", // Blue Stahli - Ultranumb
   ],
   "kpop" : [
     "https://www.youtube.com/watch?v=BL-aIpCLWnU", // Aespa - Black Mamba
@@ -196,6 +217,33 @@
     "https://www.youtube.com/watch?v=xDuaONIDgvc", // Cignature - Assa
   ],
   "epic": [
+    "https://www.youtube.com/watch?v=I9Ej80wM4wI", // Two Steps From Hell Nemesis - Nemesis
+    "https://www.youtube.com/watch?v=xJvbGuZWaFY", // City of the Fallen - Light From Darkness
+    "https://www.youtube.com/watch?v=jMsOBooF3l4", // Tom Player - AXIS
+    "https://www.youtube.com/watch?v=6rlLBahdDx4", // Colossal Trailer Music - Sentenced to Death
+    "https://www.youtube.com/watch?v=u0V8SGIVTzo", // Epikus Music - How the Mighty Have Fallen
+    "https://www.youtube.com/watch?v=MGYyK3CyT3I", // Elephant Music - Eradication 
+    "https://www.youtube.com/watch?v=JPk8WeQDfEI", // Jo Blankenburg - Lords of Arkhmar
+    "https://www.youtube.com/watch?v=gYX3jRbNZh8", // Secession Studios - Darkness of Light
+    "https://www.youtube.com/watch?v=eduwBgDcMwY", // Secession Studios - Demise of A Nation
+    "https://www.youtube.com/watch?v=hR0EcXlsnns", // Hi-Finesse - Millennia
+    "https://www.youtube.com/watch?v=oaXO0LHAnTo", // Future World Music - Destroy and Conquer
+    "https://www.youtube.com/watch?v=FsG28z_mae0", // X-Ray Dog - Army of Doom
+    "https://www.youtube.com/watch?v=3P-VQS1hC-I", // Brand X Musix - Inevitable
+    "https://www.youtube.com/watch?v=KYUd0qQ38So", // Audiomachine - Ten Thousand Slain
+    "https://www.youtube.com/watch?v=SHDu2I9SJW8", // Two Steps from Hell - No Honor in Blood
+    "https://www.youtube.com/watch?v=FjVJwcJyXmI", // Phenonix Music - All We've Got
+    "https://www.youtube.com/watch?v=grFQygwA27k", // Rok Nardin - Where is Your God Now
+    "https://www.youtube.com/watch?v=EFkrZUdupag", // Ninja Tracks - The Machination
+    "https://www.youtube.com/watch?v=7___pI-1P9Q", // Jack Trammel - Compelled
+    "https://www.youtube.com/watch?v=vhEOJlFfr0U", // Epic North & Really Slow Motion - Sea of Flames
+    "https://www.youtube.com/watch?v=K2iC1aCPbKA", // Two Steps from Hell - Heart of Courage
+    "https://www.youtube.com/watch?v=XPiWUq5DUjE", // Two Steps From Hell - Invincible
+    "https://www.youtube.com/watch?v=2QWnObyUaRE", // Really Slow Motion - " Th3 Awak3n1ng"
+    "https://www.youtube.com/watch?v=n-Dh3ftkRAs", // Two Steps From Hell - Flight of the Silverbird
+    "https://www.youtube.com/watch?v=xHtnBnKcP_U", // Audiomachine - Akkadian Empire
+    "https://www.youtube.com/watch?v=ZCO7mzsB2NY", // Mark Petrie - Carpe Noctem
+    "https://www.youtube.com/watch?v=7CP_PT9TVrc", // Epic Score - Strength to Believe
   ],
   "mellow": [
     "https://www.youtube.com/watch?v=-uv5RglK5hw", // Dayseeker - Burial Plot (Reimagined) ft. Seneca
@@ -207,6 +255,14 @@
   
   ],
   "popish": [
+    "https://www.youtube.com/watch?v=4Rg3sAb8Id8", // Christina Aguilera - Dirty,
+    "https://www.youtube.com/watch?v=dg8QgUIKXHw", // Christina Aguilera - Can't Hold Us Down,
+    "https://www.youtube.com/watch?v=K0K46C82v9o", // The Pussycat Dolls - When I Grow Up
+    "https://www.youtube.com/watch?v=rtczBseiAac", // The Black Eyed Peas - Hey Mama
+    "https://www.youtube.com/watch?v=Lg9nD2Kl-1M", // Gwen Stefani - Hollaback Girl
+    "https://www.youtube.com/watch?v=VCLxJd1d84s", // The Pussycat Dolls - Buttons
+    "https://www.youtube.com/watch?v=_P7Yr4_caB8", // Rihanna - Don't Stop The Music
+    "https://www.youtube.com/watch?v=CvBfHwUxHIk", // Rihanna - Umbrella 
   ],
   "bardcore": [
     "https://www.youtube.com/watch?v=dcu1A_EL_hQ", // Dreamcatcher - Odd eye
