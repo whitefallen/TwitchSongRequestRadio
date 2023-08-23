@@ -30,6 +30,14 @@ services:
       - "3000:3000"
     depends_on:
       - redis-stack
+  fallen-request-web:
+    build: ./issue_request
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
+    networks:
+      - fallen-radio-network
+    ports:
+      - "3003:3003"
 networks:
   fallen-radio-network:
     driver: bridge
