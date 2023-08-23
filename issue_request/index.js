@@ -28,11 +28,12 @@ app.get('/', (req, res) => {
 app.post('/sendToGitHub', (req, res) => {
   const link = req.body.songLink;
   const info = req.body.songInfo;
+  const genre = req.body.songGenre;
   octokit.request('POST /repos/{owner}/{repo}/issues', {
     owner: 'whitefallen',
     repo: 'TwitchSongRequestRadio',
     title: `[New Song] ${info}`,
-    body: `Song Link: ${link}`,
+    body: `Genre: ${genre} | Song Link: ${link}`,
     assignees: [
       'whitefallen'
     ],
