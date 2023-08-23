@@ -35,7 +35,7 @@ botChannels.forEach((channel) => {
 })
 
 const updateSongList = async () => {
-  return await axios("https://raw.githubusercontent.com/whitefallen/TwitchSongRequestRadio/songs/bot/data/songlist.json5");
+  return await axios("https://raw.githubusercontent.com/whitefallen/TwitchSongRequestRadio/master/bot/data/songlist.json5");
 }
 /** "*\/2 * * * *" */
 /** "0 6 * * *" **/

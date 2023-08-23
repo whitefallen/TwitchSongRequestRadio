@@ -92,8 +92,8 @@ class Bot {
     })
   }
   sendingSong = (song) => {
-    this.client.say(this.currentChannel, `!sr ${song}`);
-    this.reportRequestedSong(song);
+    this.client.say(this.currentChannel, `!sr ${song.link}`);
+    this.reportRequestedSong(song.link);
     this.reportSongList();
   }
 
