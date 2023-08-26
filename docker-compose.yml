@@ -15,6 +15,7 @@ services:
       - fallen-radio-network
     depends_on:
       - fallen-web-api
+    restart: unless-stopped
   redis-stack:
     container_name: redis-stack
     networks:
@@ -22,12 +23,13 @@ services:
     ports:
       - '8001:8001'
     image: "redis/redis-stack:latest"
+    restart: unless-stopped
   fallen-web-api:
     build: ./web
     networks:
       - fallen-radio-network
     ports:
-      - "3000:3000"
+      - "3000:3469"
     depends_on:
       - redis-stack
   fallen-request-web:
@@ -37,7 +39,8 @@ services:
     networks:
       - fallen-radio-network
     ports:
-      - "3003:3003"
+      - "3003:3470"
+    restart: unless-stopped
 networks:
   fallen-radio-network:
     driver: bridge
