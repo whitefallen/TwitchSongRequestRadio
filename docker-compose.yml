@@ -29,7 +29,7 @@ services:
     networks:
       - fallen-radio-network
     ports:
-      - "3000:3469"
+      - "3469:3000"
     depends_on:
       - redis-stack
   fallen-request-web:
@@ -39,7 +39,7 @@ services:
     networks:
       - fallen-radio-network
     ports:
-      - "3003:3470"
+      - "3470:3003"
     restart: unless-stopped
 networks:
   fallen-radio-network:
