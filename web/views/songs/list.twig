@@ -49,7 +49,7 @@
               {{ key }} ( {{ value|length }} )
               <ul>
                 {% for song in value %}
-                  <li><a href="{{ song }}">{{ song }}</a></li>
+                  <li><a href="{{ song.link }}">{{ song.link }}</a></li>
                 {% endfor %}
               </ul>
             </li>
