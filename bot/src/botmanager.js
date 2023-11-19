@@ -37,7 +37,7 @@ const updateSongList = async () => {
 }
 /** "*\/2 * * * *" */
 /** "0 6 * * *" **/
-cron.schedule('*\/2 * * * *', () => {
+cron.schedule('"0 6 * * *', () => {
   let newSongs = updateSongList();
   newSongs.then((res) => {
     updateBotsSongList(res.data);
