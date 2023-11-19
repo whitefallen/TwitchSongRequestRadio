@@ -1,4 +1,21 @@
 {
+  "uncategorized": [
+    {
+      "link": "https://www.youtube.com/watch?v=EuRjmzz6qL0",
+      "genre": "uncategorized",
+      "title": "H.S - Tom Cardy"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=v3H_swfQscc",
+      "genre": "uncategorized",
+      "title": "Asking Alexandria - Let Go"
+    },
+    {
+      "link": "https://www.youtube.com/watch?v=Aasy5pd_qTg",
+      "genre": "uncategorized",
+      "title": "Rabbit Junk - Fight Me, Erebus"
+    }
+  ],
   "kpop": [
     {
       "link": "https://www.youtube.com/watch?v=xDuaONIDgvc",
@@ -51,12 +68,12 @@
       "title": "Oneus - Come back home"
     },
     {
-      "link": "https://www.youtube.com/watch?v=ssJVlpoWzJY",
+      "link": "https://www.youtube.com/watch?v=MS6AwO-TlCs",
       "genre": "kpop",
       "title": "Dreamcatcher - Sahara"
     },
     {
-      "link": "https://www.youtube.com/watch?v=ZYNSuTt0S64",
+      "link": "https://www.youtube.com/watch?v=l_MK9tpRGWU",
       "genre": "kpop",
       "title": "Dreamcatcher - Red Sun"
     },
