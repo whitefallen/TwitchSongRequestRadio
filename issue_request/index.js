@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 app.post('/sendToGitHub', (req, res) => {
   const link = req.body.songLink;
   const info = req.body.songInfo;
-  const genre = req.body.songGenre;
+  const genre = req.body.songGenre ? req.body.songGenre : 'unkown';
   octokit.request('POST /repos/{owner}/{repo}/issues', {
     owner: 'whitefallen',
     repo: 'TwitchSongRequestRadio',
